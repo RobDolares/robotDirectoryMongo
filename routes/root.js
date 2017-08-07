@@ -40,9 +40,7 @@ routes.get('/:username', (req, res) => {
 
   coll.find({username: req.params.username}).toArray((err, users) => {
     res.render('bio', {users: users});
-  });
-})
-
-
+  })
+});
 
 module.exports = routes;
